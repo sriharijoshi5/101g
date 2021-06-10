@@ -105,17 +105,13 @@ const Player = (props) =>
                                 </svg>
                                 Change Perspective
                             </Fab>
-                            <video id="video_element" controls muted autoPlay width="1600px" style={{minHeight:'900px',minWidth:'1600px'}}>
+                            <video id="video_element" controls muted autoPlay width="1080px" style={{minHeight:'720px',minWidth:'1080px'}}>
                                 <source src={videoSrc} type="video/mp4"></source>
                             </video>
                         </div>
                     </Col>
                 </Row>
             </Paper>
-            <div>
-            <iframe width="1360" height="500" src="https://www.youtube.com/embed/0x16ngo8xfY?autoplay=1&loop=1&playlist=0x16ngo8xfY" frameborder="0" allowfullscreen></iframe>
-
-            </div>
         </div>
     )
 }

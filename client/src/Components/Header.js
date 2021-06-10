@@ -39,6 +39,11 @@ const Header = (props) => {
                             </NavLink>
                         </NavItem>
                         <NavItem className="ml-4 mr-2">
+                            <NavLink className="nav-link" activeStyle={activeStyle} style={style} to="/VR">
+                                <span>VR</span>
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className="ml-4 mr-2">
                             <NavLink className="nav-link" activeStyle={activeStyle} style={style} to="/about">
                                 <span>About</span>
                             </NavLink>
