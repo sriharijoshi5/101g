@@ -1,7 +1,3 @@
-.App-header {
-  min-height: 100vh;
-  color: white;
-}
 header, footer {
   background-color: #374153;
   text-align: center;
@@ -35,4 +31,218 @@ img {
 p {
   margin-bottom: 5px;
   font-size: 16px;
+}
+
+.navlink-active
+{
+    text-decoration: underline #0096dd solid !important;
+}
+
+.navlink-inactive
+{
+    text-decoration: none !important;
+}
+
+.color_nav
+{
+    font-family: 'Roboto';
+}
+
+.top_bar
+{
+    background-color: #25293d;
+}
+
+.user_icon
+{
+    background-color: #25293d !important;
+    font-size: 16px !important;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.MuiTableSortLabel-icon {
+    color: #0096dd !important;
+    opacity: 1;
+}
+
+@media print {
+	body {-webkit-print-color-adjust: exact;}
+}
+@page {
+	size:A4 landscape;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin: 0;
+	-webkit-print-color-adjust: exact;
+}
+body
+{
+	margin : 0;
+	background-color : #191c29 !important;
+	font-family: 'Roboto';
+	line-height: 1.66667;
+}
+
+.base_canvas{
+	background-color:#191c29 !important;
+	font-family:'Roboto';
+}
+
+.App{
+	background-color : #191c29 !important;
+}
+
+.App-logo {
+	height: 20vmin;
+	pointer-events: none;
+}
+
+.App-header {
+	background-color: #25293d;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	color: #f1f1f1;
+}
+
+.App-link {
+	color: #0096dd;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.bg-dark-local {
+	background-color:#25293d;
+}
+.bg-dark-left-table {
+	background-color: #191c29;
+}
+
+.Group-14 {
+	width: 44px;
+	height: 33px;
+	margin: 8px 10px 17px 0;
+	object-fit: contain;
+  }
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-track {
+    border: none;
+}
+::-webkit-scrollbar-thumb {
+    background: #576079;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #576079;
+}
+
+
+.top_bar
+{
+	background-color: #25293d !important;
+	font-size: 16px;
+	height: 70px;
+}
+
+.middle_container{
+	background-color: #25293d !important; 
+}
+
+.summary_heading{
+	font-size: 24px;
+}
+
+.table-header
+{
+	padding: 5px 28px 4px 12px;
+	height: 35px;
+	background-color: #2d3549;
+	font-size: 11px;
+	font-family: 'Roboto';
+	
+	margin: 0 89px 0 0;
+	font-stretch:normal;
+	font-weight: 100 !important;
+	font-style: normal;
+	line-height: 1.27;
+	letter-spacing: normal;
+	color: #f1f1f1;
+	border-bottom: 1px solid #0096dd !important;
+}
+
+.MuiPaper-rounded{
+	border-radius: 8px !important;
+}
+
+.MuiTableCell-root {
+	border-bottom: 1px solid rgba(241, 241, 241, 0.1) !important;
+	font-weight: 300 !important;
+}
+
+.MuiTableCell-head {
+    font-weight: 400 !important;
+	font-size: 13px !important;
+	height : 35px
+}
+
+.MuiTableRow-root.MuiTableRow-hover:hover {
+    background-color: #2d3549 !important;
+}
+
+.table-dark.table-hover tbody tr:hover {
+    background-color: #41465A !important;
+}
+
+.full-view-padding {
+	padding-right: -10px !important;
+	margin-right: 0 !important;
+}
+
+.table-responsive {
+	max-height:70vh;
+	min-height:70vh;
+	border-radius:8px;
+}
+
+.MuiTableCell-stickyHeader {
+    background-color: #2d3549 !important;
+}
+
+.MuiInput-underline:before {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.42) !important;
+}
+.MuiInput-underline:after {
+	border-bottom: 2px solid #0096dd !important;
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+	border-bottom: 2px solid rgba(255, 255, 255, 0.42) !important;
+}
+
+.form-control:focus {
+	box-shadow: none !important;
+}
+
+.modal-header .close
+{
+	color: #FFFFFF !important;
+	opacity: 1 !important;
 }

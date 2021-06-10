@@ -1,22 +1,19 @@
 import React from 'react';
-import {
-    Route,
-    BrowserRouter as Router,
-    Switch,
-} from "react-router-dom";
-import Home from './Home';
-import Player from './Player';
+import {BrowserRouter as Router} from "react-router-dom";
 import './App.css';
-import Header from './Header';
-import Footer from './Footer';
+
+import MainComponent from './Components/MainComponent';
 
 function App() {
     return (
         <Router>
-            <Switch>
+            <div className="App">
+                <MainComponent />
+            </div>
+            {/* <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route path="/player/:id" component={Player}></Route>
-            </Switch>
+            </Switch> */}
         </Router>
     );
 }
