@@ -26,7 +26,7 @@ const Player = (props) =>
             fetch(`http://localhost:4000/video/${videoId}/data`)
             .then(res => {
                 res.json()
-                .then(data => {console.log(data); setState({ ...state,videoData: data })})
+                .then(data => {setState({ ...state,videoData: data })})
                 .catch(e => console.log(e))
             })
             .catch(err =>console.log(err))
@@ -49,7 +49,7 @@ const Player = (props) =>
         if(id === videoId)
             return
         const videoElement = document.getElementById('video_element');
-        let duration = videoElement.currentTime > (videoElement.duration -10) ? 0 : videoElement.currentTime
+        let duration = videoElement.currentTime >= (videoElement.duration) ? 0 : videoElement.currentTime
         duration = Number(duration).toFixed()
 
         setState({...state,videoId:id,videoSrc:`http://localhost:4000/video/${id}`,videoData:videos[id],seekDuration:duration,transitionDate:new Date()});
@@ -70,12 +70,14 @@ const Player = (props) =>
                 open={isSidebarOpen}
                 onClose={() => toggleSidebar(false)}
                 onOpen={() => toggleSidebar(true)}
+                // children=
+                
             >
-                <List>
+                <List className="bg-dark">
                     {videos.map((e, index) => (
                     <ListItem id={e.id} button key={e.id} onClick={() => changeVideo(e.id)}>
                         <ListItemIcon>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-binoculars-fill" viewBox="0 0 16 16" style={{marginRight:8}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-binoculars-fill" viewBox="0 0 16 16" style={{marginRight:8}}>
                                 <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"/>
                             </svg>
                         </ListItemIcon>
@@ -98,7 +100,7 @@ const Player = (props) =>
                     <Col md={12} >
                         <div  >
                             <Fab variant="extended" style={{backgroundColor:COLOR.BUTTON_SUCCESS_BLUE, color:COLOR.WHITE, zIndex:99, top: '50px'}} onClick={()=>{toggleSidebar(!isSidebarOpen)}}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-binoculars-fill" viewBox="0 0 16 16" style={{marginRight:8}}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-binoculars-fill" viewBox="0 0 16 16" style={{marginRight:8}}>
                                     <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"/>
                                 </svg>
                                 Change Perspective
@@ -110,6 +112,10 @@ const Player = (props) =>
                     </Col>
                 </Row>
             </Paper>
+            <div>
+            <iframe width="1360" height="500" src="https://www.youtube.com/embed/0x16ngo8xfY?autoplay=1&loop=1&playlist=0x16ngo8xfY" frameborder="0" allowfullscreen></iframe>
+
+            </div>
         </div>
     )
 }
