@@ -21,7 +21,7 @@ a, a:hover {
 }
 video {
   width: 100%;
-  height: 50vh;
+  height: 90%;
 }
 img {
   height: 200px;
@@ -191,6 +191,9 @@ body
 .MuiPaper-rounded{
 	border-radius: 8px !important;
 }
+.MuiPaper-root {
+	background-color: #212529 !important;
+} 
 
 .MuiTableCell-root {
 	border-bottom: 1px solid rgba(241, 241, 241, 0.1) !important;
