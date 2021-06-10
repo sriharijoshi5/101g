@@ -49,7 +49,6 @@ const Home = (props) =>
                                 <CardBody>
                                     <CardTitle tag="h5">{video.name}</CardTitle>
                                     <CardSubtitle tag="h6" className="mb-2 text-muted"><i className="spinner-grow spinner-grow-sm text-danger" /> Live</CardSubtitle>
-                                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                                     <Link to={`/player/${video.id}`} props={videos}>
                                         <Button>View</Button>
                                     </Link>
