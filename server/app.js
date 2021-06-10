@@ -10,19 +10,19 @@ const videos = [
         id: 0,
         poster: '/video/0/poster',
         duration: '3 mins',
-        name: 'Cam1'
+        name: 'MainVideo'
     },
     {
         id: 1,
         poster: '/video/1/poster',
         duration: '4 mins',
-        name: 'Cam2'
+        name: 'Batsmen Perspective'
     },
     {
         id: 2,
         poster: '/video/2/poster',
         duration: '2 mins',
-        name: 'Cam3'
+        name: 'Umpire Perspective'
     },
 ];
 
